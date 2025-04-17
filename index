@@ -1,10 +1,164 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<h1>My First Heading</h1>
+<script>
+// Script to open and close sidebar
+ function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+ }
+ 
+ function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+ }
+</script>
 
-<p>My first paragraph.</p>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+     .button {
+       float:left;
+       height: 55px;
+       width: 32%;
+       border: 3px solid #dddddd;
+       color: white;
+       padding: 1px 1px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-family: Calibri, Arial;
+       font-size: 15px;
+       margin: 4px 2px;
+       cursor: pointer;
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);    
+       //background-color: #dddddd;
+       background-color: black;
+       border-radius: 8px;
+     }
 
+     /* Clear floats (clearfix hack) */
+     .button:after {
+       content: "";
+       clear: both;
+       display: table;
+     }
+
+     .button button:not(:last-child) {
+       border-right: none; /* Prevent double borders */
+     }       
+
+     .button:disabled {
+       background-color: #dddddd;
+       transform: translateY(4px);
+     }
+
+     .button:active {
+       background-color: #3e8e41;
+       //box-shadow: 0 5px #666;
+       transform: translateY(4px);
+     }
+     
+     .button1:hover {
+       background-color: #008CBA;/* Blue */
+       //background-color: #04AA6D;/* Green */
+       color: white;
+       cursor: hand;
+     }
+     
+</style>
+
+</head>
+<body class="w3-light-grey">
+
+<!-- SIDE BAR w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left-->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-card w3-white w3-animate-left" style="z-index:3;width:280px;" id="mySidebar"><br>
+  <!-- sec logo-->  
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://assets.onecompiler.app/43egf9wny/43eutff72/Logo%20dummy%201.png" style="width:60%; margin:auto;" class="w3-round"><br><br>
+    <h4><b>SECTION</b></h4>
+    <p class="w3-text-grey"></p>
+  </div>
+  <!-- sec menus navigation--> 
+  <div class="w3-bar-block">
+    <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Intro</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <!-- sec sosial links-->  
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Sidebar End-->
+
+
+<!-- PAGE CONTENT -->
+<div class="w3-main" style="margin-left:300px">
+  <!-- Header -->
+  <header id="portfolio">
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>TITLE</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button>
+      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right" onclick="google.script.run.withSuccessHandler(changePage).newPage('Homepage1')"></i>PAGE 1</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-line-chart w3-margin-right" onclick="google.script.run.withSuccessHandler(changePage).newPage('Homepage2')"></i>PAGE 2</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right" onclick="google.script.run.withSuccessHandler(changePage).newPage('Homepage3')"></i>PAGE 3</button>
+    </div>
+    </div>
+  </header>
+  
+  <!-- content 1 -->
+  <div class="w3-main" style="margin-left:10px; height:500px;">
+  <h4>Homepage1</h4>
+  </div>
+
+<!-- FOOTER -->
+  <br>
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>SECTION 1</h3>
+      <ul class="w3-ul w3-hoverable">
+
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>SECTION 2</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-grey w3-small w3-margin-bottom"></span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  <div class="w3-black w3-center w3-padding-24"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+<!-- END PAGE CONTENT-->
+</div>
 </body>
 </html>
